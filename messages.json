@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "12345-abcde",
+    "name": "AMF Registration Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register Valid User 1",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"user_id\": \"ue001\", \"name\": \"Alice\", \"site_code\": \"NYC\", \"imsi\": \"123456789012345\"}"
+        },
+        "url": {
+          "raw": "http:localhost:83/amf/register",
+          "protocol": "http",
+          "host": ["host.docker.internal"],
+          "port": "83",
+          "path": ["amf", "register"]
+        }
+      }
+    },
+    {
+      "name": "Register Valid User 2",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"user_id\": \"ue002\", \"name\": \"Bob\", \"site_code\": \"LON\", \"imsi\": \"123459999999999\"}"
+        },
+        "url": {
+          "raw": "http:localhost:83/amf/register",
+          "protocol": "http",
+          "host": ["host.docker.internal"],
+          "port": "83",
+          "path": ["amf", "register"]
+        }
+      }
+    },
+    {
+      "name": "Register Invalid IMSI",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"user_id\": \"ue003\", \"name\": \"Eve\", \"site_code\": \"SFO\", \"imsi\": \"000009999999999\"}"
+        },
+        "url": {
+          "raw": "http:localhost:83/amf/register",
+          "protocol": "http",
+          "host": ["host.docker.internal"],
+          "port": "83",
+          "path": ["amf", "register"]
+        }
+      }
+    },
+    {
+      "name": "Register Duplicate User",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"user_id\": \"ue001\", \"name\": \"Alice-Duplicate\", \"site_code\": \"NYC\", \"imsi\": \"123456789012345\"}"
+        },
+        "url": {
+          "raw": "http:localhost:83/amf/register",
+          "protocol": "http",
+          "host": ["host.docker.internal"],
+          "port": "83",
+          "path": ["amf", "register"]
+        }
+      }
+    }
+  ]
+}
