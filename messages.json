@@ -15,9 +15,9 @@
           "raw": "{\"user_id\": \"ue001\", \"name\": \"Alice\", \"site_code\": \"NYC\", \"imsi\": \"123456789012345\"}"
         },
         "url": {
-          "raw": "http:localhost:83/amf/register",
+          "raw": "http:amf:83/amf/register",
           "protocol": "http",
-          "host": ["host.docker.internal"],
+          "host": ["amf"],
           "port": "83",
           "path": ["amf", "register"]
         }
@@ -33,9 +33,9 @@
           "raw": "{\"user_id\": \"ue002\", \"name\": \"Bob\", \"site_code\": \"LON\", \"imsi\": \"123459999999999\"}"
         },
         "url": {
-          "raw": "http:localhost:83/amf/register",
+          "raw": "http:amf:83/amf/register",
           "protocol": "http",
-          "host": ["host.docker.internal"],
+          "host": ["amf"],
           "port": "83",
           "path": ["amf", "register"]
         }
@@ -51,9 +51,9 @@
           "raw": "{\"user_id\": \"ue003\", \"name\": \"Eve\", \"site_code\": \"SFO\", \"imsi\": \"000009999999999\"}"
         },
         "url": {
-          "raw": "http:localhost:83/amf/register",
+          "raw": "http:amf:83/amf/register",
           "protocol": "http",
-          "host": ["host.docker.internal"],
+          "host": ["amf"],
           "port": "83",
           "path": ["amf", "register"]
         }
@@ -69,9 +69,9 @@
           "raw": "{\"user_id\": \"ue001\", \"name\": \"Alice-Duplicate\", \"site_code\": \"NYC\", \"imsi\": \"123456789012345\"}"
         },
         "url": {
-          "raw": "http:localhost:83/amf/register",
+          "raw": "http:amf:83/amf/register",
           "protocol": "http",
-          "host": ["host.docker.internal"],
+          "host": ["amf"],
           "port": "83",
           "path": ["amf", "register"]
         }
